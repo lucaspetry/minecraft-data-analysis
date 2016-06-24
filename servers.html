@@ -1,0 +1,85 @@
+<meta charset="utf-8">
+<html>
+    <head>
+        <title>Minecraft - Servers</title>
+		
+		<!-- Page Icon -->
+        <link rel="icon" type="image/png" href="image/minecraft.ico">
+		
+		<!-- CSS Files -->
+        <link rel="stylesheet" href="css/styleServers.css">
+
+		<!-- Scripts -->
+        <script type="text/javascript" src="js/d3.min.js"></script>
+    </head>
+	<body>
+		<div id="main_container">
+			<div id="main_box">
+				<span style="font-size: 18">
+					<a href="index.html" style="margin-right: 90%">
+						<img src="image/home.png" border="0" style="margin-right: 3px; vertical-align: text-bottom" width="20" height="20"> Main View
+					</a>
+				</span><br/>
+				<span align="center" style="font-size: 24px; font-weight: bold">Servers Data</span>
+				<br/><br/>
+				<table style="width: 975px; height: 350px; border-top: 2px solid #366085">
+					<tr>
+						<td>
+							<div id="chart_pieServersEvents_title" style="font-size: 20px; font-weight: bold; margin-left: 40%">Events</div>
+							<div id="chart_pieServersEvents">
+								<div id="chart_pieServersEvents_load" style="height: 30px; padding-top: 150px; color: #AAAAAA">
+									<img src="image/loading.gif" border="0" style="margin-bottom: 10px"><br>
+									L O A D I N G
+								</div>
+							</div>
+							<script type="text/javascript" src="js/chart.pie.servers.events.js"></script>
+						</td>
+						<td>
+							<form action="">
+								Start: <input type="number" name="start" style="width:75px; text-align: center">
+								End: <input type="number" name="end" style="width:75px; text-align: center; margin-bottom: 10px"><br/>
+								<button type="button" onclick="updateChart()" style="margin-left:30%">Update Range</button><br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S1">S1<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S2">S2<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S3">S3<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S4">S4<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S5">S5<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S6">S6<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S7">S7<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S8">S8<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S9">S9<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S10">S10<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S11">S11<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S12">S12<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S13" checked>S13<br/>
+								<input type="radio" name="serverOpt" onclick="updateChart(this.value)" value="S14">S14
+							</form>						
+						</td>
+					</tr>
+				</table>
+				<table style="border:0px;">
+					<tr>
+						<td style="width: 475px; height: 350px; border-top: 2px solid #366085;
+									border-bottom: 2px solid #366085; text-align: center">
+							<div id="chart_barsInteractionsChat">
+								<div id="chart_barsInteractionsChat_title" style="font-size: 20px; font-weight: bold">Chats Between Users</div>
+							</div>
+							<script type="text/javascript" src="js/chart.bars.interactions.chat.js"></script>
+							<div id="chart_barsInteractionsKilledBy" style="">
+								<div id="chart_barsInteractionsKilledBy_title" style="font-size: 20px; font-weight: bold">Kills Between Users</div>
+							</div>
+							<script type="text/javascript" src="js/chart.bars.interactions.killedBy.js"></script>
+							<form action="">
+								<input type="radio" name="userInteraction" onclick="changeBarChart(this.value)" value="Chat" checked>Chat
+								<input type="radio" name="userInteraction" onclick="changeBarChart(this.value)" value="KilledBy">KilledBy
+								<input type="checkbox" name="sortChat" value="Sorted" style="margin-left:50%">
+								<input type="checkbox" name="sortKilledBy" value="Sorted" style="margin-left:50%; display:none">Sorted
+							</form>
+						</td>
+						<td style="width: 15px;"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

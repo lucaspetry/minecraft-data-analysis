@@ -1,0 +1,116 @@
+@charset "utf-8";
+@font-face {
+font-family: NerisLight;
+src: url("../font/Neris-Light.otf") format("opentype");
+}
+@font-face {
+font-family: NerisLight;
+font-weight: bold;
+src: url("../font/Neris-SemiBold.otf") format("opentype");
+}
+body {
+	padding: 0;
+	font-family: NerisLight;
+	font-size: 12px;
+	margin: 0px auto auto auto;
+	color: #36322b;
+	background-color: #366085;
+}
+#main_container {
+	position: relative;
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	padding: 0px;
+}
+#main_box {
+	padding: 5px 10px 20px 10px;
+	font-size: 14px;
+	background-color: #FFFFFF;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+#main_box a {
+	text-decoration: none;
+	color: #36322b;
+}
+#main_box a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #366085;
+}
+#chart_barsInteractionsChat {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 475px;
+	height: 350px;
+}
+#chart_barsInteractionsKilledBy {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 475px;
+	height: 350px;
+}
+#chart_pieServersEvents {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 650px;
+	height: 400px;
+}
+p {
+	text-indent: 0em;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: justify;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+  fill-opacity: .9;
+}
+
+.x.axis path {
+  display: none;
+}
+
+label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+div.tooltip {
+	padding: 4px;
+	border-radius: 1px;
+	background-color: #FFFFFF;
+	box-shadow: 1px 1px 5px #CCC;
+	border: 1px solid #CCC;
+    position: absolute;			
+    text-align: left;		
+    width: 150px;
+    height: 30px;				
+    font: 12px NerisLight;
+    pointer-events: none;			
+}
+path.slice{
+	stroke-width:2px;
+}
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+	pointer-events: none;
+}

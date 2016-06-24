@@ -1,0 +1,141 @@
+@charset "utf-8";
+@font-face {
+font-family: NerisLight;
+src: url("../font/Neris-Light.otf") format("opentype");
+}
+@font-face {
+font-family: NerisLight;
+font-weight: bold;
+src: url("../font/Neris-SemiBold.otf") format("opentype");
+}
+body {
+	padding: 0;
+	font-family: NerisLight;
+	font-size: 12px;
+	margin: 0px auto auto auto;
+	color: #36322b;
+	background-color: #366085;
+}
+#main_container {
+	position: relative;
+	width: 1000px;
+	height: auto;
+	margin: auto;
+	padding: 0px;
+}
+#main_box {
+	padding: 5px 10px 20px 10px;
+	font-size: 14px;
+	background-color: #FFFFFF;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	text-align: center;
+}
+#main_box a {
+	text-decoration: none;
+	color: #36322b;
+}
+#main_box a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #366085;
+}
+#chart_worldMap {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 800px;
+	height: 370px;
+}
+#chart_barsKeys {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 475px;
+	height: 350px;
+}
+#chart_pieServers {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 475px;
+	height: 350px;
+	cursor: pointer;
+}
+#chart_linesServers {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 975px;
+	height: 500px;
+}
+#menu_worldMap {
+	font-size: 14px;
+	width: 175px;
+    height: 370px;
+}
+#menu_worldMap ul {
+	margin: 0px;
+	padding: 0px;
+}
+#menu_worldMap ul li {
+	cursor: pointer;
+	display: block;
+    height: 20px;
+	margin: 0px;
+	padding: 4px 2px 2px 6px;
+	text-decoration: none;
+}
+#menu_worldMap ul li:hover {
+	background-color: #EEEEEE;
+	text-decoration: none;
+}
+p {
+	text-indent: 0em;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: justify;
+}
+.bar {
+	fill: steelblue;
+}
+.bar:hover {
+	fill: brown;	
+}
+.axis {
+  font: 11px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.chart_g {
+    pointer-events: all;	
+}
+.barchart_svg {
+	border: 0px;	
+}
+.slice {
+	pointer-events: all;
+}
+div.tooltip {
+	padding: 4px;
+	border-radius: 1px;
+	background-color: #FFFFFF;
+	box-shadow: 1px 1px 5px #CCC;
+	border: 1px solid #CCC;
+    position: absolute;			
+    text-align: left;		
+    width: 120px;
+    height: 30px;				
+    font: 12px NerisLight;
+    pointer-events: none;			
+}
+path.slice{
+	stroke-width:2px;
+}
+polyline{
+	opacity: .3;
+	stroke: black;
+	stroke-width: 2px;
+	fill: none;
+	pointer-events: none;
+}

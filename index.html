@@ -1,0 +1,88 @@
+<meta charset="utf-8">
+<html>
+    <head>
+        <title>Minecraft - Overview</title>
+		
+		<!-- Page Icon -->
+        <link rel="icon" type="image/png" href="image/minecraft.ico">
+		
+		<!-- CSS Files -->
+        <link rel="stylesheet" href="css/style.css">
+
+		<!-- Scripts -->
+        <script type="text/javascript" src="js/d3.min.js"></script>
+        <script type="text/javascript" src="js/topojson.min.js"></script> <!-- Used by datamaps -->
+        <script type="text/javascript" src="js/datamaps.world.min.js"></script> <!-- Used by chart.world -->
+    </head>
+	<body>
+		<div id="main_container">
+			<div id="main_box">
+				<span style="font-size: 36; font-weight: bold">Minecraft Data Analysis</span>
+				<br/><br/>
+				<div style="text-align: left; font-size: 15px; padding: 0px 2px 5px 2px">
+					<p>This is a main overview of a Minecraft events dataset. You can select one option on the right menu to show on the world map.</p>
+				</div>
+				<div id="chart_worldMap_title" style="font-size: 20px; font-weight: bold; padding-top: 5px; border-top: 2px solid #366085">Overall Data According to the Country of Login</div>
+				<table style="border:0px">
+					<tr>
+						<td>
+							<div id="chart_worldMap">
+								<div id="chart_worldMap_load" style="height: 30px; padding-top: 150px; color: #AAAAAA">
+									<img src="image/loading.gif" border="0" style="margin-bottom: 10px"><br>
+									L O A D I N G
+								</div>
+							</div>
+							<script type="text/javascript" src="js/chart.world.interactive.js"></script>
+						</td>
+						<td>
+							<div id="menu_worldMap">
+								<b>Dataset:</b>
+								<ul>
+									<li onclick="updateWorldMap(this.value);"
+										value="1" id="worldOption1">Total Number of Logins</li>
+									<li onclick="updateWorldMap(this.value);"
+										value="2" id="worldOption2">Deaths/Logins Ratio</li>
+									<li onclick="updateWorldMap(this.value);"
+										value="3" id="worldOption3">Kicks/Logins Ratio</li>
+								</ul>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<div style="text-align: left; font-size: 15px; padding: 7px 2px 7px 2px; border-top: 2px solid #366085">
+					<p>Below you can see the main information about events, either considering the types of events or 
+					the server in which the event happened. By going over any type of event on the left side, it is
+					possible to visualize the data for servers corresponding to that event. Click on the servers chart
+					for a more detailed view of servers events.
+				</div>
+				<table style="border:0px;">
+					<tr>
+						<td style="width: 475px; height: 350px; border-top: 2px solid #366085;
+									border-bottom: 2px solid #366085; text-align: center">
+							<div id="chart_barsKeys">
+								<div id="chart_barsKeys_title" style="font-size: 20px; font-weight: bold">Events by Type</div>
+								<div id="chart_barsKeys_load" style="height: 30px; padding-top: 100px; color: #AAAAAA">
+									<img src="image/loading.gif" border="0" style="margin-bottom: 10px"><br>
+									L O A D I N G
+								</div>
+							</div>
+							<script type="text/javascript" src="js/chart.bars.keys.js"></script>
+						</td>
+						<td style="width: 15px;"></td>
+						<td style="width: 475px; height: 350px; border-top: 2px solid #366085;
+									border-bottom: 2px solid #366085; text-align: center">
+							<div id="chart_pieServers">
+								<div id="chart_pieServers_title" style="font-size: 20px; font-weight: bold">Events by Server</div>
+								<div id="chart_pieServers_load" style="height: 30px; padding-top: 100px; color: #AAAAAA">
+									<img src="image/loading.gif" border="0" style="margin-bottom: 10px"><br>
+									L O A D I N G
+								</div>
+							</div>
+							<script type="text/javascript" src="js/chart.pie.servers.js"></script>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
