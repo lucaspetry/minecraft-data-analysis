@@ -1,5 +1,5 @@
 # Minecraft Data Analysis
-Project developed during the course ECS 163 Information Interfaces at University of California, Davis. The objective was to analyze some data from the game Minecraft looking for interesting facts. Due to size issues, only about 70% of the servers' events is included.
+Project developed during the course ECS 163 Information Interfaces at University of California, Davis. The objective was to analyze some data from the game Minecraft looking for interesting facts. Due to size issues, only part of the servers' events is included.
 
 Project Overview:
 
